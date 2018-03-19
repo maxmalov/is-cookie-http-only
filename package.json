@@ -1,0 +1,17 @@
+{
+  "name": "is-cookie-httponly",
+  "version": "0.0.1",
+  "description": "Checks whether cookie is HTTP only",
+  "main": "dist.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "js-cookie": "2.2.0"
+  },
+  "devDependencies": {
+    "rollup": "0.57.1",
+    "rollup-plugin-uglify": "3.0.0"
+  }
+}
