@@ -1,17 +1,16 @@
-import chai from 'chai';
+import assert from 'assert';
 import isCookieHttpOnly from '../main';
 
-const { expect } = chai;
 const SECRET_TESTEM_COOKIE = 'io';
 
 it('should be a function', () => {
-  expect(isCookieHttpOnly).to.be.a('function');
+  assert.equal(typeof isCookieHttpOnly, 'function');
 });
 
 it('should detect http only cookie', () => {
-  expect(isCookieHttpOnly(SECRET_TESTEM_COOKIE)).to.equal(true);
+  assert.strictEqual(isCookieHttpOnly(SECRET_TESTEM_COOKIE), true);
 });
 
 it('should detect non http only cookie', () => {
-  expect(isCookieHttpOnly('test')).to.equal(false);
+  assert.strictEqual(isCookieHttpOnly('test'), false);
 });
