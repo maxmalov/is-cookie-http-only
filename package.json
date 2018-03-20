@@ -1,17 +1,24 @@
 {
-  "name": "is-cookie-httponly",
+  "name": "is-cookie-http-only",
   "version": "0.0.1",
   "description": "Checks whether cookie is HTTP only",
   "main": "dist.js",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test:watch": "testem",
+    "test": "testem ci"
   },
   "dependencies": {
     "js-cookie": "2.2.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4",
     "rollup": "0.57.1",
-    "rollup-plugin-uglify": "3.0.0"
+    "rollup-plugin-uglify": "3.0.0",
+    "testem": "^2.0.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   }
 }

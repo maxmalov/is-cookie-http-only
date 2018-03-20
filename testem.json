@@ -1,0 +1,17 @@
+{
+  "framework": ["mocha"],
+  "serve_files": [
+    "__tests__/test-bundle.js"
+  ],
+  "css_files": [
+    "./node_modules/mocha/mocha.css"
+  ],
+  "launch_in_dev": ["Chrome", "Firefox"],
+  "launch_in_ci": ["Chrome", "Firefox"],
+  "before_tests": "webpack --config webpack.testem.config.js",
+  "proxies": {
+    "/setcookies": {
+      "target": "http://localhost:9119"
+    }
+  }
+}
