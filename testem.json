@@ -5,5 +5,15 @@
   ],
   "launch_in_dev": ["Chrome", "Firefox"],
   "launch_in_ci": ["Chrome", "Firefox"],
-  "before_tests": "webpack --config webpack.testem.config.js"
+  "before_tests": "webpack --config webpack.testem.config.js",
+  "browser_args": {
+    "Chrome": [
+      "--headless",
+      "--disable-gpu",
+      "--remote-debugging-port=9222"
+    ],
+    "Firefox": [
+      "-headless"
+    ]
+  }
 }
