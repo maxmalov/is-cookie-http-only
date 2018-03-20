@@ -1,4 +1,5 @@
 import assert from 'assert';
+import Cookies from 'js-cookie';
 import isCookieHttpOnly from '../main';
 
 const SECRET_TESTEM_COOKIE = 'io';
@@ -13,4 +14,9 @@ it('should detect http only cookie', () => {
 
 it('should detect non http only cookie', () => {
   assert.strictEqual(isCookieHttpOnly('test'), false);
+});
+
+it('should clean up tmp cookie', () => {
+  isCookieHttpOnly('test12');
+  assert.strictEqual(Cookies.get('test12'), undefined);
 });

@@ -8,7 +8,7 @@ export default function(cookieName) {
 
   Cookies.set(cookieName, 'test');
   const test = Cookies.get('test');
-  Cookies.remove('test');
+  Cookies.remove(cookieName);
 
   return !test;
 }
