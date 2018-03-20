@@ -8,10 +8,5 @@
   ],
   "launch_in_dev": ["Chrome", "Firefox"],
   "launch_in_ci": ["Chrome", "Firefox"],
-  "before_tests": "webpack --config webpack.testem.config.js",
-  "proxies": {
-    "/setcookies": {
-      "target": "http://localhost:9119"
-    }
-  }
+  "before_tests": "webpack --config webpack.testem.config.js"
 }

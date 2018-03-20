@@ -4,8 +4,6 @@ import isCookieHttpOnly from '../main';
 const { expect } = chai;
 const SECRET_TESTEM_COOKIE = 'io';
 
-before(async () => await fetch('/setcookies'));
-
 it('should be a function', () => {
   expect(isCookieHttpOnly).to.be.a('function');
 });
