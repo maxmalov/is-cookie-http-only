@@ -1,6 +1,6 @@
 {
   "name": "is-cookie-http-only",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Checks whether cookie is HTTP only",
   "main": "dist.js",
   "license": "MIT",
